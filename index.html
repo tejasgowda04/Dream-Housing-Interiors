@@ -61,8 +61,9 @@
             "closes": "19:00"
         },
         "sameAs": [
+            "https://www.instagram.com/interiordesignbysharanshetty",
+            "https://www.youtube.com/@dreamhousinginteriors",
             "https://www.facebook.com/dreamhousinginteriors",
-            "https://www.instagram.com/dreamhousinginteriors",
             "https://www.linkedin.com/company/dream-housing-interiors"
         ]
     }
@@ -138,7 +139,7 @@
     
     <!-- PRELOAD CRITICAL IMAGES -->
     <link rel="preload" as="image" href="logo.png">
-    <link rel="preload" as="image" href="p1.jpg">
+    <link rel="preload" as="image" href="p1.JPG">
     
     <style>
         :root {
@@ -388,6 +389,43 @@
             white-space: nowrap;
             border: 0;
         }
+        
+        /* SOCIAL MEDIA ICONS */
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201, 162, 77, 0.3);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(201, 162, 77, 0.2);
+        }
+        
+        .instagram-icon {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+        }
+        
+        .youtube-icon {
+            background: #FF0000;
+            color: white;
+        }
+        
+        .whatsapp-icon {
+            background: #25D366;
+            color: white;
+        }
+        
+        .phone-icon {
+            background: var(--accent);
+            color: var(--primary);
+        }
     </style>
 </head>
 <body class="antialiased" itemscope itemtype="https://schema.org/WebPage">
@@ -410,14 +448,33 @@
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex items-center space-x-8">
+                <div class="hidden md:flex items-center space-x-6">
                     <a href="#home" class="font-medium hover:text-accent transition" style="color: var(--text-secondary);" aria-label="Home">Home</a>
                     <a href="#about" class="font-medium hover:text-accent transition" style="color: var(--text-secondary);" aria-label="About Us">About</a>
                     <a href="#services" class="font-medium hover:text-accent transition" style="color: var(--text-secondary);" aria-label="Our Services">Services</a>
                     <a href="#portfolio" class="font-medium hover:text-accent transition" style="color: var(--text-secondary);" aria-label="Our Portfolio">Portfolio</a>
                     <a href="#process" class="font-medium hover:text-accent transition" style="color: var(--text-secondary);" aria-label="Our Process">Process</a>
                     <a href="#contact" class="font-medium hover:text-accent transition" style="color: var(--text-secondary);" aria-label="Contact Us">Contact</a>
-                    <button onclick="openWhatsApp()" class="px-6 py-2 rounded-full font-medium transition-all duration-300 hover:opacity-90" style="background-color: var(--accent); color: var(--primary);" aria-label="Book Free Consultation on WhatsApp">
+                    
+                    <!-- Social Media Icons in Navigation -->
+                    <div class="flex items-center space-x-3 ml-4 border-l border-accent pl-4">
+                        <a href="https://www.instagram.com/interiordesignbysharanshetty?igsh=c2xuN2lhdXI5bGp5&utm_source=qr" 
+                           target="_blank" 
+                           class="social-icon instagram-icon" 
+                           aria-label="Follow us on Instagram"
+                           title="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://youtube.com/@dreamhousinginteriors?si=c73Ex8sIuNya5vbB" 
+                           target="_blank" 
+                           class="social-icon youtube-icon" 
+                           aria-label="Subscribe to our YouTube channel"
+                           title="Subscribe to our YouTube channel">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <button onclick="openWhatsApp()" class="px-6 py-2 rounded-full font-medium transition-all duration-300 hover:opacity-90 ml-2" style="background-color: var(--accent); color: var(--primary);" aria-label="Book Free Consultation on WhatsApp">
                         Book Consultation
                     </button>
                 </div>
@@ -438,6 +495,31 @@
                 <a href="#portfolio" class="font-medium py-2 hover:text-accent transition" style="color: var(--text-secondary);" role="menuitem">Portfolio</a>
                 <a href="#process" class="font-medium py-2 hover:text-accent transition" style="color: var(--text-secondary);" role="menuitem">Process</a>
                 <a href="#contact" class="font-medium py-2 hover:text-accent transition" style="color: var(--text-secondary);" role="menuitem">Contact</a>
+                
+                <!-- Social Media in Mobile Menu -->
+                <div class="flex space-x-4 pt-4 border-t border-accent">
+                    <a href="https://www.instagram.com/interiordesignbysharanshetty?igsh=c2xuN2lhdXI5bGp5&utm_source=qr" 
+                       target="_blank" 
+                       class="social-icon instagram-icon" 
+                       aria-label="Follow us on Instagram"
+                       title="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@dreamhousinginteriors?si=c73Ex8sIuNya5vbB" 
+                       target="_blank" 
+                       class="social-icon youtube-icon" 
+                       aria-label="Subscribe to our YouTube channel"
+                       title="Subscribe to our YouTube channel">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="tel:+919148170413" 
+                       class="social-icon phone-icon" 
+                       aria-label="Call Dream Housing Interiors"
+                       title="Call Dream Housing Interiors">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                
                 <button onclick="openWhatsApp()" class="mt-4 px-6 py-3 rounded-full font-medium transition-all duration-300 hover:opacity-90" style="background-color: var(--accent); color: var(--primary);" role="menuitem">
                     Book Consultation
                 </button>
@@ -944,6 +1026,47 @@
                                         <p style="color: var(--text-secondary);" itemprop="openingHours">Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: By Appointment Only</p>
                                     </div>
                                 </div>
+                                
+                                <!-- Social Media in Contact Section -->
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full flex items-center justify-center mr-4 gradient-accent">
+                                        <i class="fas fa-share-alt" style="color: var(--accent);" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-3" style="color: var(--text-primary);">Follow Us</h4>
+                                        <div class="flex space-x-4">
+                                            <a href="https://www.instagram.com/interiordesignbysharanshetty?igsh=c2xuN2lhdXI5bGp5&utm_source=qr" 
+                                               target="_blank" 
+                                               class="social-icon instagram-icon" 
+                                               aria-label="Follow us on Instagram"
+                                               title="Follow us on Instagram">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                            <a href="https://youtube.com/@dreamhousinginteriors?si=c73Ex8sIuNya5vbB" 
+                                               target="_blank" 
+                                               class="social-icon youtube-icon" 
+                                               aria-label="Subscribe to our YouTube channel"
+                                               title="Subscribe to our YouTube channel">
+                                                <i class="fab fa-youtube"></i>
+                                            </a>
+                                            <a href="tel:+919148170413" 
+                                               class="social-icon phone-icon" 
+                                               aria-label="Call Dream Housing Interiors"
+                                               title="Call Dream Housing Interiors">
+                                                <i class="fas fa-phone"></i>
+                                            </a>
+                                            <button onclick="openWhatsApp()" 
+                                                    class="social-icon whatsapp-icon" 
+                                                    aria-label="Message us on WhatsApp"
+                                                    title="Message us on WhatsApp">
+                                                <i class="fab fa-whatsapp"></i>
+                                            </button>
+                                        </div>
+                                        <p class="mt-3 text-sm" style="color: var(--text-secondary);">
+                                            Follow us for design inspiration, project updates, and interior design tips.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div>
@@ -988,7 +1111,39 @@
             <div class="border-t border-accent mt-8 pt-8 text-center" style="color: var(--text-secondary);">
                 <p>&copy; <span id="currentYear">2023</span> Dream Housing Interiors. All rights reserved. | Proprietor: Sharan Shetty | GSTIN: 29NNDPS1177M1Z1</p>
                 <p class="mt-2 text-sm">JP Nagar, Bengaluru, Karnataka 560078 | <a href="tel:+917676833296" class="hover:text-accent">+91 76768 33296</a> | <a href="mailto:contact@dreamhousinginteriors.com" class="hover:text-accent">contact@dreamhousinginteriors.com</a></p>
-                <p class="mt-4 text-xs opacity-70">Dream Housing Interiors is a registered architectural and interior design studio in Bengaluru, Karnataka, India.</p>
+                
+                <!-- Social Media in Footer -->
+                <div class="mt-6 flex justify-center space-x-4">
+                    <a href="https://www.instagram.com/interiordesignbysharanshetty?igsh=c2xuN2lhdXI5bGp5&utm_source=qr" 
+                       target="_blank" 
+                       class="social-icon instagram-icon" 
+                       aria-label="Follow us on Instagram"
+                       title="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@dreamhousinginteriors?si=c73Ex8sIuNya5vbB" 
+                       target="_blank" 
+                       class="social-icon youtube-icon" 
+                       aria-label="Subscribe to our YouTube channel"
+                       title="Subscribe to our YouTube channel">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="tel:+919148170413" 
+                       class="social-icon phone-icon" 
+                       aria-label="Call Dream Housing Interiors"
+                       title="Call Dream Housing Interiors">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <button onclick="openWhatsApp()" 
+                            class="social-icon whatsapp-icon" 
+                            aria-label="Message us on WhatsApp"
+                            title="Message us on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </button>
+                </div>
+                
+                <p class="mt-6 text-xs opacity-70">Dream Housing Interiors is a registered architectural and interior design studio in Bengaluru, Karnataka, India.</p>
+                <p class="mt-2 text-xs opacity-70">Follow us on social media for design inspiration and project updates.</p>
             </div>
         </div>
     </footer>
@@ -1059,8 +1214,7 @@
     }
     </script>
 
-    <!-- Scripts -->
-    <script>
+   <script>
         // DOM Elements
         const mobileMenuButton = document.getElementById('mobileMenuButton');
         const mobileMenu = document.getElementById('mobileMenu');
@@ -1070,261 +1224,377 @@
         const popupForm = document.getElementById('popupForm');
         const filterButtons = document.querySelectorAll('.filter-btn');
         const projectItems = document.querySelectorAll('.project-item');
+        const nav = document.querySelector('nav');
         const currentYear = document.getElementById('currentYear');
-        
-        // Set current year
-        currentYear.textContent = new Date().getFullYear();
-        
-        // Toggle Mobile Menu with ARIA
+
+        // Mobile Menu Toggle
         mobileMenuButton.addEventListener('click', () => {
             const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
             mobileMenu.classList.toggle('hidden');
-            mobileMenu.setAttribute('aria-hidden', isExpanded);
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            
+            // Change icon
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.className = 'fas fa-bars text-2xl';
+            } else {
+                icon.className = 'fas fa-times text-2xl';
+            }
         });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobileMenu a, #mobileMenu button').forEach(element => {
-            element.addEventListener('click', () => {
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
                 mobileMenu.classList.add('hidden');
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
-                mobileMenu.setAttribute('aria-hidden', 'true');
-            });
+                mobileMenuButton.querySelector('i').className = 'fas fa-bars text-2xl';
+            }
         });
-        
-        // Open WhatsApp with pre-filled message
+
+        // Navigation Scroll Effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                nav.classList.remove('nav-hidden');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !mobileMenu.classList.contains('hidden')) {
+                // Scrolling down
+                nav.classList.add('nav-hidden');
+            } else if (currentScroll < lastScroll) {
+                // Scrolling up
+                nav.classList.remove('nav-hidden');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Open WhatsApp Function
         function openWhatsApp(service = 'General enquiry') {
-            const phoneNumber = "917676833296"; // REPLACE WITH ACTUAL NUMBER
-            const message = `Hello Dream Housing Interiors, I'm interested in ${service}. Please contact me for a consultation.`;
+            const phoneNumber = '919148170413';
+            const message = `Hello Dream Housing Interiors! I'm interested in ${service}. Please contact me.`;
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         }
-        
-        // Form submission to WhatsApp
-        function submitToWhatsApp(formData, isPopup = false) {
-            const phoneNumber = "917676833296"; // REPLACE WITH ACTUAL NUMBER
-            const { name, phone, email, message } = formData;
-            
-            const whatsappMessage = 
-                `*New Enquiry - Dream Housing Interiors*\n\n` +
-                `*Name:* ${name}\n` +
-                `*Phone:* ${phone}\n` +
-                `*Email:* ${email}\n` +
-                `*Project Details:* ${message || 'No additional details provided'}\n\n` +
-                `_Submitted via website ${isPopup ? 'popup form' : 'contact form'}_`;
-            
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(url, '_blank');
-            
-            // Reset form
-            if (isPopup) {
-                popupForm.reset();
-                popupOverlay.classList.remove('active');
-                popupOverlay.setAttribute('aria-hidden', 'true');
-            } else {
-                contactForm.reset();
-            }
-            
-            // Show confirmation
-            alert('Thank you! You will now be redirected to WhatsApp to send your enquiry.');
-        }
-        
-        // Contact Form Submission
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('name').value,
-                phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-            
-            submitToWhatsApp(formData, false);
-        });
-        
-        // Popup Form Submission
-        popupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('popupName').value,
-                phone: document.getElementById('popupPhone').value,
-                email: document.getElementById('popupEmail').value,
-                message: document.getElementById('popupMessage').value
-            };
-            
-            submitToWhatsApp(formData, true);
-        });
-        
-        // Show popup after 10 seconds
-        setTimeout(() => {
+
+        // Popup Functions
+        function showPopup() {
             popupOverlay.classList.add('active');
             popupOverlay.setAttribute('aria-hidden', 'false');
-        }, 10000);
-        
-        // Close popup
-        closePopup.addEventListener('click', () => {
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hidePopup() {
             popupOverlay.classList.remove('active');
             popupOverlay.setAttribute('aria-hidden', 'true');
-        });
-        
-        // Close popup when clicking outside
-        popupOverlay.addEventListener('click', (e) => {
-            if (e.target === popupOverlay) {
-                popupOverlay.classList.remove('active');
-                popupOverlay.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close popup on button click
+        closePopup.addEventListener('click', hidePopup);
+
+        // Close popup on outside click
+        popupOverlay.addEventListener('click', (event) => {
+            if (event.target === popupOverlay) {
+                hidePopup();
             }
         });
-        
-        // Close popup with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
-                popupOverlay.classList.remove('active');
-                popupOverlay.setAttribute('aria-hidden', 'true');
+
+        // Auto-show popup after 5 seconds
+        setTimeout(() => {
+            if (!sessionStorage.getItem('popupShown')) {
+                showPopup();
+                sessionStorage.setItem('popupShown', 'true');
             }
+        }, 5000);
+
+        // Contact Form Submission
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `New Enquiry from Website:\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
+            const url = `https://wa.me/919148170413?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            window.open(url, '_blank');
+            contactForm.reset();
+            
+            // Show confirmation
+            alert('Thank you! Opening WhatsApp to send your enquiry.');
         });
-        
-        // Portfolio Filtering with ARIA
+
+        // Popup Form Submission
+        popupForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            const name = document.getElementById('popupName').value;
+            const phone = document.getElementById('popupPhone').value;
+            const email = document.getElementById('popupEmail').value;
+            const message = document.getElementById('popupMessage').value;
+            
+            const whatsappMessage = `Popup Enquiry - Free Consultation:\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message}`;
+            const url = `https://wa.me/919148170413?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            window.open(url, '_blank');
+            popupForm.reset();
+            hidePopup();
+        });
+
+        // Portfolio Filtering
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Update active button with ARIA
+                // Remove active class from all buttons
                 filterButtons.forEach(btn => {
                     btn.classList.remove('active');
-                    btn.style.backgroundColor = 'transparent';
+                    btn.style.backgroundColor = '';
                     btn.style.color = 'var(--text-primary)';
                     btn.setAttribute('aria-selected', 'false');
                 });
                 
+                // Add active class to clicked button
                 button.classList.add('active');
                 button.style.backgroundColor = 'var(--accent)';
                 button.style.color = 'var(--primary)';
                 button.setAttribute('aria-selected', 'true');
                 
-                // Filter projects
                 const filter = button.getAttribute('data-filter');
                 
+                // Filter projects
                 projectItems.forEach(item => {
                     if (filter === 'all' || item.getAttribute('data-category') === filter) {
                         item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'translateY(0)';
-                        }, 10);
                     } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'translateY(20px)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
+                        item.style.display = 'none';
                     }
                 });
             });
         });
-        
-        // Lazy loading images
+
+        // Scroll Animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-up, .text-reveal, .count-up');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Lazy Loading Images
         function lazyLoadImages() {
-            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const images = document.querySelectorAll('img[data-src]');
             
             const imageObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const img = entry.target;
+                        img.src = img.getAttribute('data-src');
                         img.classList.add('lazy-loaded');
                         observer.unobserve(img);
                     }
                 });
             });
             
-            lazyImages.forEach(img => imageObserver.observe(img));
+            images.forEach(img => imageObserver.observe(img));
         }
-        
-        // Scroll Animations
-        function checkScroll() {
-            const elements = document.querySelectorAll('.fade-up, .text-reveal');
+
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.count-up');
             
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const increment = target / 100;
+                let current = 0;
                 
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('active');
-                }
-            });
-            
-            // Navbar hide/show on scroll
-            const nav = document.querySelector('nav');
-            let lastScrollTop = 0;
-            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (currentScrollTop > lastScrollTop && currentScrollTop > 100) {
-                nav.classList.remove('nav-visible');
-                nav.classList.add('nav-hidden');
-            } else {
-                nav.classList.remove('nav-hidden');
-                nav.classList.add('nav-visible');
-            }
-            
-            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-        }
-        
-        // Initialize on load
-        window.addEventListener('load', () => {
-            checkScroll();
-            lazyLoadImages();
-            
-            // Animate hero text
-            const textReveals = document.querySelectorAll('.text-reveal');
-            textReveals.forEach((element, index) => {
-                setTimeout(() => {
-                    element.classList.add('active');
-                }, index * 300);
-            });
-            
-            // Load more projects when page loads
-            setTimeout(() => {
-                const allProjects = document.querySelectorAll('.project-item');
-                allProjects.forEach((project, index) => {
-                    if (index >= 6) {
-                        project.style.display = 'none';
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current) + (counter.getAttribute('data-suffix') || '');
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target + (counter.getAttribute('data-suffix') || '');
                     }
-                });
-            }, 500);
-        });
-        
-        // Check scroll position
-        window.addEventListener('scroll', checkScroll);
-        
-        // Smooth scrolling for anchor links
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Set Current Year
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+
+        // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                if (href === '#') return;
+                
                 e.preventDefault();
+                const targetElement = document.querySelector(href);
                 
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                     
-                    // Update URL hash without scrolling
-                    history.pushState(null, null, targetId);
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        mobileMenuButton.querySelector('i').className = 'fas fa-bars text-2xl';
+                    }
                 }
             });
         });
-        
-        // Page load performance tracking
-        window.addEventListener('load', function() {
-            const perfData = window.performance.timing;
-            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-            console.log('Page loaded in: ' + pageLoadTime + 'ms');
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger initial animations
+            animateOnScroll();
+            
+            // Set up lazy loading
+            lazyLoadImages();
+            
+            // Add scroll event listener for animations
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Observe counter elements for animation
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.count-up').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+            
+            // Initialize image zoom hover effect
+            document.querySelectorAll('.image-zoom').forEach(container => {
+                const img = container.querySelector('img');
+                if (img) {
+                    container.addEventListener('mouseenter', () => {
+                        img.style.transform = 'scale(1.05)';
+                    });
+                    container.addEventListener('mouseleave', () => {
+                        img.style.transform = 'scale(1)';
+                    });
+                }
+            });
+            
+            // Add error handling for images
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', function() {
+                    const parent = this.parentElement;
+                    if (parent.classList.contains('gradient-accent') || 
+                        parent.classList.contains('gradient-dark')) {
+                        // Show fallback icon for decorative images
+                        const icon = document.createElement('i');
+                        icon.className = 'fas fa-image text-4xl';
+                        icon.style.color = 'var(--accent)';
+                        icon.setAttribute('aria-hidden', 'true');
+                        parent.innerHTML = '';
+                        parent.appendChild(icon);
+                    }
+                });
+            });
         });
+
+        // Handle keyboard navigation for accessibility
+        document.addEventListener('keydown', (event) => {
+            // Close mobile menu on Escape
+            if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.querySelector('i').className = 'fas fa-bars text-2xl';
+            }
+            
+            // Close popup on Escape
+            if (event.key === 'Escape' && popupOverlay.classList.contains('active')) {
+                hidePopup();
+            }
+            
+            // Tab key navigation trap for popup
+            if (popupOverlay.classList.contains('active')) {
+                const focusableElements = popupOverlay.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+                
+                if (event.key === 'Tab') {
+                    if (event.shiftKey) {
+                        // Shift + Tab
+                        if (document.activeElement === firstElement) {
+                            lastElement.focus();
+                            event.preventDefault();
+                        }
+                    } else {
+                        // Tab
+                        if (document.activeElement === lastElement) {
+                            firstElement.focus();
+                            event.preventDefault();
+                        }
+                    }
+                }
+            }
+        });
+
+        // Print functionality
+        function printPage() {
+            window.print();
+        }
+
+        // Add print button event listener if needed
+        const printButton = document.querySelector('[onclick="printPage()"]');
+        if (printButton) {
+            printButton.addEventListener('click', printPage);
+        }
+
+        // Touch device detection for hover effects
+        function isTouchDevice() {
+            return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        }
+
+        if (isTouchDevice()) {
+            document.body.classList.add('touch-device');
+        }
+
+        // Performance monitoring (optional)
+        window.addEventListener('load', () => {
+            // Log performance metrics
+            if (window.performance) {
+                const perfData = window.performance.timing;
+                const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+                console.log(`Page loaded in ${pageLoadTime}ms`);
+            }
+        });
+
+        // Service worker registration (optional - for PWA)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(error => {
+                    console.log('Service Worker registration failed:', error);
+                });
+            });
+        }
     </script>
-</body>
-</html>
-
-
-
